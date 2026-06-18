@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/PretendardVariable.ttf') format('truetype');
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── 다크모드 변수 ─────────────────────────────────── */
+html.dark {
+  --bg-primary:    #0a0a0a;
+  --bg-secondary:  #111111;
+  --bg-card:       #1a1a1a;
+  --bg-hover:      #242424;
+
+  --text-primary:  #ffffff;
+  --text-high:     rgba(255,255,255,0.88);
+  --text-muted:    rgba(255,255,255,0.55);
+  --text-subtle:   rgba(255,255,255,0.38);
+  --text-faint:    rgba(255,255,255,0.22);
+
+  --border:        rgba(255,255,255,0.1);
+  --border-subtle: rgba(255,255,255,0.07);
+  --border-faint:  rgba(255,255,255,0.04);
+}
+
+/* ── 라이트모드 변수 ───────────────────────────────── */
+html.light {
+  --bg-primary:    #f2f2f7;
+  --bg-secondary:  #e5e5ea;
+  --bg-card:       #ffffff;
+  --bg-hover:      #ebebf0;
+
+  --text-primary:  #0a0a0a;
+  --text-high:     rgba(0,0,0,0.85);
+  --text-muted:    rgba(0,0,0,0.55);
+  --text-subtle:   rgba(0,0,0,0.38);
+  --text-faint:    rgba(0,0,0,0.22);
+
+  --border:        rgba(0,0,0,0.1);
+  --border-subtle: rgba(0,0,0,0.07);
+  --border-faint:  rgba(0,0,0,0.04);
+}
+
+:root {
+  --bg-primary:    #0a0a0a;
+  --bg-secondary:  #111111;
+  --bg-card:       #1a1a1a;
+  --bg-hover:      #242424;
+
+  --text-primary:  #ffffff;
+  --text-high:     rgba(255,255,255,0.88);
+  --text-muted:    rgba(255,255,255,0.55);
+  --text-subtle:   rgba(255,255,255,0.38);
+  --text-faint:    rgba(255,255,255,0.22);
+
+  --border:        rgba(255,255,255,0.1);
+  --border-subtle: rgba(255,255,255,0.07);
+  --border-faint:  rgba(255,255,255,0.04);
+
+  --main: #826cff;
+  --gray: #bababa;
+  --red:  #e40000;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-33.333%); }
+  to   { transform: translateX(0); }
+}
+
+.animate-marquee-left  { animation: marquee-left  150s linear infinite; }
+.animate-marquee-right { animation: marquee-right  30s linear infinite; }
+.marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+
+body {
+  font-family: 'Pretendard', Arial, sans-serif;
+  overflow-x: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.2s, color 0.2s;
+}
+
+.inner { max-width: 1770px; margin: 0 auto; }
+
+.scrollbar-thin::-webkit-scrollbar { width: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 99px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--border-subtle);
+}
+
+[data-sonner-toast] [data-description] {
+  color: rgba(255,255,255,0.75) !important;
+  opacity: 1 !important;
+}
+
+a, button, [role="button"], [onClick],
+label[for], input[type="checkbox"], input[type="radio"],
+input[type="submit"], input[type="button"], select, summary {
+  cursor: pointer;
+}
+
+.min-h-screen {
+  padding-bottom: 100px;
+}

@@ -1,0 +1,206 @@
+/* ── 페이지 루트 ── */
+.pageRoot {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    padding-top: clamp(72px, 9vw, 180px);
+}
+
+/* ── 상단: 플레이어 + 사이드바 ── */
+.playerRow {
+    display: flex;
+    height: clamp(420px, 58vh, 680px);
+    background: #000;
+    max-width: 90%;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* 비디오 영역 */
+.playerArea {
+    flex: 1;
+    min-width: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 플레이어 로딩 / 에러 상태 */
+.playerState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+
+    span {
+        font-size: 13px;
+        color: var(--text-faint);
+    }
+}
+
+/* ── 하단 ── */
+.bottomRow {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(220px, 24vw, 320px) 80px 24px;
+}
+
+/* ── 스피너 ── */
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: #6c63ff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── 로딩 화면 ── */
+.loadingScreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+}
+
+/* ── 에러 화면 ── */
+.errorScreen {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    p {
+        font-size: 15px;
+        color: var(--text-muted);
+    }
+
+    button {
+        padding: 10px 24px;
+        background: #6c63ff;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        transition: opacity 0.15s;
+
+        &:hover { opacity: 0.85; }
+    }
+}
+
+/* ── 뒤로가기 버튼 ── */
+.backBtn {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    margin: 0 0 12px 5%;
+    padding: 8px 14px;
+    background: var(--bg-secondary);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+
+    &:hover {
+        color: var(--text-primary);
+        background: var(--bg-hover);
+    }
+}
+
+@media (max-width: 1200px) {
+    .playerRow {
+        max-width: 90%;
+        height: clamp(380px, 54vh, 600px);
+    }
+
+    .bottomRow {
+        max-width: 90%;
+        padding-right: 260px;
+    }
+}
+
+@media (max-width: 960px) {
+    .pageRoot {
+        padding-top: 72px;
+    }
+
+    .playerRow {
+        flex-direction: column;
+        height: auto;
+        max-width: 90%;
+        border-radius: 14px;
+    }
+
+    .playerArea {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        min-height: 260px;
+    }
+
+    .bottomRow {
+        max-width: 90%;
+        padding: 0 0 64px;
+    }
+}
+
+@media (max-width: 640px) {
+    .pageRoot {
+        padding-top: 96px;
+    }
+
+    .playerRow {
+        max-width: 90%;
+        border-radius: 12px;
+    }
+
+    .playerArea {
+        min-height: 210px;
+    }
+
+    .playerState {
+        gap: 10px;
+        padding: 18px;
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .bottomRow {
+        max-width: 90%;
+        padding-bottom: 48px;
+    }
+
+    .backBtn {
+        gap: 4px;
+        margin-bottom: 10px;
+        padding: 7px 10px;
+        font-size: 12px;
+        border-radius: 999px;
+    }
+}
