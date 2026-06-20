@@ -12,6 +12,8 @@ import {
 } from "firebase/firestore";
 import { saveNotification } from "@/utils/notification";
 
+// =========
+
 export type CouponType = "rate" | "fixed";
 export type CouponStatus = "active" | "used" | "expired";
 
