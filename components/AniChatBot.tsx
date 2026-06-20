@@ -9,6 +9,8 @@ interface Message {
   content: string
 }
 
+// ===
+
 interface Recommendation {
   id: number
   title: string
@@ -226,11 +228,11 @@ export default function AniChatBot({ rightOffset, onClose }: Props) {
                   style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border)', color: 'var(--text-muted)' }}
                   onMouseEnter={e => {
                     (e.currentTarget as HTMLButtonElement).style.borderColor = '#6c63ff'
-                    ;(e.currentTarget as HTMLButtonElement).style.color = '#9d97ff'
+                      ; (e.currentTarget as HTMLButtonElement).style.color = '#9d97ff'
                   }}
                   onMouseLeave={e => {
                     (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--border)'
-                    ;(e.currentTarget as HTMLButtonElement).style.color = 'var(--text-muted)'
+                      ; (e.currentTarget as HTMLButtonElement).style.color = 'var(--text-muted)'
                   }}
                 >
                   {s}
@@ -279,11 +281,11 @@ export default function AniChatBot({ rightOffset, onClose }: Props) {
                           style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border)' }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLDivElement).style.borderColor = '#6c63ff'
-                            ;(e.currentTarget as HTMLDivElement).style.background = 'var(--bg-hover)'
+                              ; (e.currentTarget as HTMLDivElement).style.background = 'var(--bg-hover)'
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--border)'
-                            ;(e.currentTarget as HTMLDivElement).style.background = 'var(--bg-secondary)'
+                              ; (e.currentTarget as HTMLDivElement).style.background = 'var(--bg-secondary)'
                           }}
                         >
                           <div
