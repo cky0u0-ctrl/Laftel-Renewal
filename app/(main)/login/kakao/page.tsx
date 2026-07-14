@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 export default function KakaoLoginPage() {
     useEffect(() => {
         const CLIENT_ID = process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID
-        const REDIRECT_URI = encodeURIComponent(`${window.location.origin}/login/kakao/callback`)
+        const REDIRECT_URI = encodeURIComponent(process.env.NEXT_PUBLIC_KAKAO_REDIRECT_URI!)
         const url = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}`
         window.location.href = url
     }, [])
