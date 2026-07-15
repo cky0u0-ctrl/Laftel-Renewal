@@ -1,4 +1,5 @@
 # 🍿 Laftel OTT & Store Platform
+[Screenshot 2026-07-15 at 12.21.10.webm](https://github.com/user-attachments/assets/a0db702b-864c-4a18-8ef1-2dbdbe237998)
 
 OTT와 굿즈 스토어를 하나의 서비스로 통합한 UX/UI 프로젝트입니다.
 
