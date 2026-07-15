@@ -7,6 +7,8 @@
 
 OTT와 굿즈 스토어를 하나의 서비스로 통합한 UX/UI 프로젝트입니다.
 
+시연영상 : https://youtu.be/4FQPfT5VIFc
+
 ## 🔗 Demo
 
 - Deploy : https://laftel-renewal.vercel.app
