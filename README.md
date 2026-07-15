@@ -1,6 +1,8 @@
 # 🍿 Laftel OTT & Store Platform
-[Screenshot 2026-07-15 at 12.21.10.webm](https://github.com/user-attachments/assets/a0db702b-864c-4a18-8ef1-2dbdbe237998)
-![Uploading 라프텔 스토어.png…]()
+[Screenshot 2026-07-15 at 12.21.10.webm](https://github.com/user-attachments/assets/37a0f690-d941-4863-8c08-dcec2ca2a8f3)
+
+<img width="1881" height="902" alt="라프텔 스토어" src="https://github.com/user-attachments/assets/dee03df2-c44d-4257-82e7-826d721158a9" />
+
 
 
 OTT와 굿즈 스토어를 하나의 서비스로 통합한 UX/UI 프로젝트입니다.
